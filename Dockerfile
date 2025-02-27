@@ -5,7 +5,7 @@ FROM node:20 AS build
 ENV NODE_OPTIONS="--max-old-space-size=8192"
 
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install
 
 COPY . ./
