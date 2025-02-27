@@ -16,7 +16,7 @@ FROM node:20-slim AS runtime
 
 WORKDIR /app
 COPY --from=build /app/dist ./dist
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 RUN npm install --omit=dev
 
